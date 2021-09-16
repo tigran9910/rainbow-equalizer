@@ -30,7 +30,7 @@
 
 ## About The Project
 
-img
+![snapshot](https://user-images.githubusercontent.com/90608993/133674777-ee6db4cd-0af9-438e-aa38-d22a9dbe8fbe.PNG)
 
 A music player with a glowing CSS animation and rainbow-colored audio visualizer
 

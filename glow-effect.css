@@ -1,0 +1,106 @@
+.progress {
+  background: linear-gradient(
+    135deg,
+    #ff0000,
+    #ff1e00,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #0051ff,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0062,
+    #ff0000
+  );
+  background-size: calc(400% + 300px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s;
+}
+.volume-bar {
+  position: relative;
+}
+
+.glow-on-hover:before,
+.volume-bar:before,
+.song-menu > button.active-song:before {
+  content: "";
+  background: linear-gradient(
+    135deg,
+    #ff0000,
+    #ff1e00,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #0051ff,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0062,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 500%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.song-menu > button.active-song:before {
+  border-radius: 0;
+}
+
+.glow-on-hover:active,
+.song-menu > button.active-song:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after,
+.volume-bar:active:after,
+.song-menu > button.active-song:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before,
+.volume-bar:hover:before,
+.song-menu > button.active-song:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after,
+.volume-bar:after,
+.song-menu > button.active-song:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.song-menu > button.active-song:after {
+  border-radius: 0;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

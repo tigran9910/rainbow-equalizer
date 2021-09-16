@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://boredblue.github.io/music-player/style.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://boredblue.github.io/music-player/glow-effect.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://boredblue.github.io/music-player/mobile.css"
+    />
+    <link
+      rel="icon"
+      href="https://boredblue.github.io/music-player/favicons/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="player-container">
+      <div id="player">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <audio src="" id="audio"></audio>
+
+      <div class="song-menu"></div>
+
+      <div class="under-progress">
+        <h3 class="song-title">Song Title</h3>
+        <div class="navigation">
+          <button id="prev" class="action-btn glow-on-hover">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big glow-on-hover">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn glow-on-hover">
+            <i class="fas fa-forward"></i>
+          </button>
+          <div class="volume-section">
+            <button id="volume" class="action-btn volume-btn glow-on-hover">
+              <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="volume-bar">
+              <div class="volume-progress"></div>
+            </div>
+          </div>
+          <button id="menu" class="action-btn glow-on-hover">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <footer>&copy; Copyright 2021 Tigran. All music is from NCS Youtube.</footer>
+    </div>
+    <script src="https://boredblue.github.io/music-player/equalizer.js"></script>
+    <script src="https://boredblue.github.io/music-player/player.js"></script>
+  </body>
+</html>

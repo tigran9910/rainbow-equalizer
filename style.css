@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --btn-color: rgb(184, 184, 184);
+}
+body {
+  height: 100vh;
+  background-color: black;
+  color: var(--btn-color);
+  font-family: "Patrick Hand", cursive;
+  font-size: 2rem;
+}
+.player-container {
+  display: grid;
+  grid-template-rows: 7fr 1fr 1fr 50px;
+  width: 100%;
+  height: 100%;
+}
+
+#player {
+  display: flex;
+  justify-content: center;
+}
+
+#canvas {
+  width: 80%;
+  height: 450px;
+  margin-bottom: 5px;
+  margin-left: 2%;
+}
+
+.progress-bar {
+  cursor: pointer;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+}
+
+.under-progress {
+  display: flex;
+  align-items: start;
+}
+.navigation {
+  display: flex;
+  margin-bottom: 50px;
+  padding-right: 50px;
+}
+.song-title {
+  margin: 0 100px;
+  height: 100px;
+  width: 300px;
+  margin-bottom: 50px;
+  transform: rotate(-7deg);
+}
+.volume-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #25c2f7;
+}
+
+.action-btn {
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: var(--btn-color);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.volume-bar {
+  cursor: pointer;
+  width: 250px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #111;
+  margin: 0 100px 0 5px;
+}
+
+.volume-progress {
+  background-color: var(--btn-color);
+  border-radius: 5px;
+  height: 100%;
+  width: 30%;
+}
+
+.song-menu {
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 300px;
+  min-height: 300px;
+  height: auto;
+  right: 10px;
+  bottom: 30%;
+  z-index: 2;
+  overflow: auto;
+}
+.song-menu.closed {
+  display: none;
+}
+
+.song-menu > button {
+  padding: 10px;
+  width: calc(100% - 4px);
+  border: none;
+  outline: none;
+  color: var(--btn-color);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  font-family: "Patrick Hand", cursive;
+  font-size: 1rem;
+}
+.song-menu > button.active-song {
+  margin: 5px 0;
+  width: calc(100% - 8px);
+}
+
+footer {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Patrick Hand", cursive;
+}
+footer > a {
+  text-decoration: none;
+  color: lightblue;
+  font-family: "Patrick Hand", cursive;
+}

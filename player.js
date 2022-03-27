@@ -39,7 +39,7 @@ loadSong(songs[songIndex]);
 
 function loadSong(song) {
   title.innerText = song;
-  audioS.src = `https://boredblue.github.io/music-player/music/${song}.mp3`;
+  audioS.src = `https://tigran9910.github.io/rainbow-equalizer/music/${song}.mp3`;
 }
 
 function playSong() {
